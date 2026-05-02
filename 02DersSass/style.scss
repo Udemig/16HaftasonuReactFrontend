@@ -1,0 +1,47 @@
+@import "degiskenler";
+
+@mixin onemli-yazi {
+    color:red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+.ozel-button {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+body{
+    background-color: $arkaplan-renk;
+    color: $yazi-renk;
+}
+
+nav{
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px;
+
+    ul{
+        background-color: aliceblue;
+        margin: 10px;
+        padding: 10px;   
+
+        li{
+            background-color: aquamarine;
+            margin: 10px;
+            padding: 10px;
+
+            a{
+                @include onemli-yazi;
+                &:hover{
+                    @extend .ozel-button;
+                }
+            }
+        }
+    }
+}
