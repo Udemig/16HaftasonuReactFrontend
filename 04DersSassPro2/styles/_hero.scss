@@ -1,0 +1,62 @@
+@use "variables";
+@use "mixin";
+
+.hero_container{
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+
+    @include mixin.respond(md){
+        grid-template-columns: repeat(2,2fr);
+    }
+
+    .hero-image{
+        img{
+            width: 100%;
+            max-width: 550px;
+            height: 100%;
+        }
+    }
+
+    .hero_content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &_title{
+            font-size: 4rem;
+            font-weight: 700;
+            color: variables.$text-dark;
+            line-height: 4.75rem;
+
+            span{
+                color: variables.$secondary-color;
+            }
+        }
+
+        &_description{
+            line-height: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        &_buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            a{
+                font-size: 1rem;
+                font-weight: 500;
+                color: variables.$text-dark;
+                display: flex;
+                align-items: center;
+                columns: 0.25rem;
+                i{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,74 @@
+@use "variables";
+@use "mixin";
+
+.services{
+    background-color: variables.$extra-light;
+
+    .section_header{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    &_grid{
+        display: grid;
+        gap: 1rem;
+        margin: 4rem 0;
+
+        @include mixin.respond(sm){
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include mixin.respond(md){
+            grid-template-columns: repeat(4,1fr);
+            gap: 1.5rem;
+        }
+    }
+
+    .services-card{
+        padding: 1rem;
+        background-color: variables.$white;
+        border-radius: 0.75rem;
+
+        &:nth-child(1) div{
+            background-color: #f0fdfa;
+            color: #29d5be;
+        }
+
+        &:nth-child(2) div{
+            background-color: #fff1f2;
+            color: #fc637e;
+        }
+
+        &:nth-child(3) div{
+            background-color: #faf5ff;
+            color: #c27aff;
+        }
+
+        &:nth-child(4) div{
+            background-color: #f0f9ff;
+            color: #24bcff;
+        }
+
+        div{
+            padding: 5px 8px;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            max-width: max-content;
+        }
+
+        h4{
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            font-weight: 700;
+            color: variables.$text-dark;
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+            color: variables.$text-light;
+            line-height: 1.5rem;
+        }
+    }
+}

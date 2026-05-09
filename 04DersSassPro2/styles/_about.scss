@@ -1,0 +1,70 @@
+@use "variables";
+@use "mixin";
+
+.about-container{
+    display: grid;
+    gap: 2rem;
+
+    @include mixin.respond(md){
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+
+    .about_image{
+        max-width: 450px;
+        margin-inline: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .about_content{
+        margin: 2rem 0;
+        h2{
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .about_list{
+            display: grid;
+            gap: 2rem;
+            li{
+                display: flex;
+                gap: 2rem;
+                &:nth-child(1) .left{
+                    background-color: #f0fdfa;
+                    color: #29d5be;
+                }
+                 &:nth-child(2) .left{
+                    background-color: #fff1f2;
+                    color: #fc637e;
+                }
+                 &:nth-child(3) .left{
+                    background-color: #faf5ff;
+                    color: #c27aff;
+                }
+                .left{
+                    display: grid;
+                    place-items: center;
+                    font-size: 1.7rem;
+                    padding: 5px;
+                    border-radius: 6px;
+                   
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    h4{
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                    }
+                    p{
+                        color: variables.$text-light;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

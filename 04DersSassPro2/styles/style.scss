@@ -1,0 +1,30 @@
+@use "header";
+@use "variables";
+@use "hero";
+@use "service";
+@use "about";
+@use "portfolio";
+@use "feedback";
+@use "newsletter";
+
+.btn{
+    padding:  0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: variables.$primary-color;
+    color: variables.$white;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover{
+        box-shadow:  0 5px 20px rgba(0,0,0,0.2);
+    }
+}
+
+.section_container{
+    max-height: variables.$max-width;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+

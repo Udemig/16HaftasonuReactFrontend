@@ -1,0 +1,94 @@
+@use "variables";
+@use "mixin";
+
+.nav{
+    position: sticky;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+
+    &_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem;
+        background-color: variables.$primary-color;
+        max-width: variables.$max-width;
+        margin: 0 auto;
+
+        .nav_logo{
+            a{
+                font-size: 1.25rem;
+                font-weight: 800;
+                color: variables.$white;
+                white-space: nowrap;
+            }
+        }
+
+        .nav_links{
+            background-color: variables.$primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            z-index: -1;
+            transform: translateY(-100%);
+
+            a{
+                color: variables.$white;
+                font-weight: 500;
+                font-size: 1rem;
+            }
+        }
+
+        .nav_btn{
+            display: none;
+        }
+
+        .nav_menu_btn{
+            background: none;
+            cursor: pointer;
+            i{
+                color: variables.$white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @include mixin.respond(md){
+        .nav{
+            &_header{
+                background-color: transparent;
+            }
+
+            &_logo{
+                a{
+                    color: variables.$secondary-color
+                }
+            }
+
+            &_links{
+                position: static;
+                transform: translateY(0);
+                flex-direction: row;
+                background-color: transparent;
+                a{
+                    color: variables.$text-light;
+                }
+            }
+        }
+    }
+
+    @include mixin.respond(lg){
+        .nav{
+            &_btn{
+                display: block;
+            }
+        }
+    }
+
+}
