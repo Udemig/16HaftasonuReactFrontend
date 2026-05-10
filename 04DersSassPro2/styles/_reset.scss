@@ -1,0 +1,17 @@
+@use "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: variables.$font-family;
+}
