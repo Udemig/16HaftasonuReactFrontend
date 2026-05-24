@@ -10,6 +10,24 @@ let kadi = prompt("kullanici adini gir")
 
 console.log(kadi)
 
+/* 
+Kuullanicidan alinan 2 adet sayiyi toplayip console log attiran
+bir uygulama yapiniz
+*/
+
+/* 
+elinizde bir kullaniAdi ve sifre ayric kullaniciAdi ve Sifre"yi kullanicdan alip
+eger eslesiyorlarsa conlosa "hosgeldiniz" eslesmiyorlarsa "yanlis bilgir" yazin
+
+*/
+
+
+/* 
+elinizde bir sayi olsun ve kullanicida 1 sayi girsin eger bu sayilar esit ise
+consola "kazandiniz" degilse "kaybettiniz yazan" bir code-script yaziniz
+
+*/
+
 let yeniBilgi = new String("MEmocan nasilsin sen bakayim")
 document.write("yeniBilgi: " + yeniBilgi + "</br>")
 
