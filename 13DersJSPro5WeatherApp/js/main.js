@@ -167,7 +167,6 @@ uiElement.unitToggle.querySelectorAll("button").forEach((btn)=>{
 })
 
 uiElement.locateBtn.addEventListener("click",()=>{
-    console.log("dene")
     uiElement.searchInput.value = ""
     handleGeoSearch()
 })
